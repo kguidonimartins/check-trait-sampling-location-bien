@@ -2,7 +2,7 @@
 
 DOCKER_IMAGE := kguidonimartins/check-trait-sampling-location-bien
 
-all: create-db run ## run create-db and run targets
+all: get-bien-data create-db run ## run create-db and run targets
 
 run: create-db ## run shiny app locally
 	xdg-open http://127.0.0.1:8080/
@@ -16,7 +16,7 @@ else
 	@echo "trait data already exists! exit."
 endif
 
-create-db:   ## create db based on csv
+create-db: get-bien-data ## create db based on csv
 ifeq (,$(wildcard ./bien.db))
 	@echo "Creating db"
 	python create_db.py
