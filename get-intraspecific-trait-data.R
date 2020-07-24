@@ -60,5 +60,11 @@ multi_trait <-
     .progress = TRUE
   )
 
+data_dir <- "data"
+
+if (!dir.exists(data_dir)) {
+  dir.create(data_dir)
+}
+
 # save the data
 write_csv(multi_trait, here("data", "all_traits_from_bien.csv"))
