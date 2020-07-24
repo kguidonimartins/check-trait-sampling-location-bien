@@ -14,7 +14,6 @@ ipak <- function(pkg) {
 ipak(
   c(
     "tidyverse",
-    "tidylog",
     "future",
     "furrr",
     "parallel",
