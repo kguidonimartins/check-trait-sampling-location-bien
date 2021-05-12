@@ -1,0 +1,19 @@
+## TODO
+
+- Change the logic for data cleaninig process:
+        - do not merge data into data/all_traits_from_bien.csv; them in data/raw/ per trait file
+        - insert each file into bien.db
+
+- Change the logic of filtering process in shiny:
+        - first choose the available trait
+        - get the species list for the choosed trait
+        - list in the input field all species available for the choosed trait
+
+## DOING
+
+
+## WAITING
+
+
+## DONE
+

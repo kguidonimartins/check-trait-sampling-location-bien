@@ -4,7 +4,7 @@ DOCKER_IMAGE := kguidonimartins/check-trait-sampling-location-bien
 
 all: get-bien-data create-db run ## run create-db and run targets
 
-run: create-db ## run shiny app locally
+run:  ## run shiny app locally
 	xdg-open http://127.0.0.1:8080/
 	Rscript -e "shiny::runApp(appDir = '.', port = 8080, quiet = TRUE)"
 
